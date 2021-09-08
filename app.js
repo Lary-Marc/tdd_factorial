@@ -1,21 +1,45 @@
 
 
+// using recursion method to calculate factorial
+// class MathsService {
+//     factorial(num) {
+//         if (num < 0) 
+//             return null
+//         else if (num == 0) 
+//             return 1;
+//         else {
+//             return (num * this.factorial(num - 1));
+//         }
+        
+//     }
+    
+// };
 
 
-module.exports = class MathsService {
+ //using the for loop to calculate factorial
+class MathsService {
     factorial(num) {
         if (num < 0) 
-            return -1
-        else if (num == 0) 
-            return 1;
+            return null
+       
         else {
-            return (num * this.factorial(num - 1));
+            let fact =1
+            for(let i =num; i>=1; i--){
+                fact=fact*i
+                
+            }
+            return fact
         }
+        
     }
+    
 };
 
+maths = new MathsService()
+console.log(maths.factorial(4))
 
-// 5!=5(5-1)(5-2)(5-3)(5-4)
-// 5!=5*4*3*2*1
-   
-// 7!=7*6*5*4*3*2*1
+module.exports = MathsService
+
+
+
+

@@ -11,7 +11,7 @@ describe('Factorial', function() {
 
     it('factorial should return correct value', function() {
         const mathsService = new MathsService();
-       assert.equal(mathsService.factorial(-99), -1);
+       assert.equal(mathsService.factorial(-99), null);
        
     });
 
